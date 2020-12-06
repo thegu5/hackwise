@@ -49,7 +49,7 @@ public class Listener implements MessageCreateListener {
 
         }
         //command dictionary
-        if (event.getMessageContent().equalsIgnoreCase("!help")) {
+        else if (event.getMessageContent().equalsIgnoreCase("!help")) {
             event.getChannel().sendMessage("To receive course recommendations:\n" +
                     "!studyCS - to find a Computer Programming course\n" +
                     "!studyMath - to find mathematics courses\n" +
@@ -57,7 +57,8 @@ public class Listener implements MessageCreateListener {
                     "!studyScience - to find science courses\n" +
                     "!studyELA - to find English Language Arts courses\n" +
                     "!studyGrammar - to find a grammar course\n" +
-                    "!easteregg - to try a random, interesting course");
+                    "!easteregg - to try a random, interesting course\n" +
+                    "To get a tutor: !tutor(subjectname)");
         }
     }
     /*public String nestedResponse(MessageCreateEvent response){
